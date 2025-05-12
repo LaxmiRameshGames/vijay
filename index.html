@@ -3,102 +3,1009 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Laxmi Ramesh Games</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Happy Birthday Vijay!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        :root {
+            --primary-color: #7b2cbf;
+            --vibrant-purple: #9d4edd;
+            --secondary-color: #e0aaff;
+            --accent-color: #ffca3a;
+            --dark-color: #240046;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #ff6600;
-        }
-        p {
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e0aaff 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23e0aaff' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='20' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='25' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+            color: var(--dark-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: #333;
+        
+        header {
+            background: linear-gradient(rgba(123, 44, 191, 0.7), rgba(36, 0, 70, 0.7)), url('https://i.imgur.com/placeholder.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
-            border-radius: 5px;
+            text-align: center;
+            padding: 6rem 0;
+            min-height: 450px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
         }
-        a {
-            color: #ff6600;
+        
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px rgba(255, 202, 58, 0.8);
+            background: linear-gradient(45deg, #ffca3a, #ffffff, #ffca3a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(255, 202, 58, 0.6);
+            animation: pulseText 3s infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px #ffca3a); }
+            50% { filter: drop-shadow(0 0 20px #ffca3a); }
+        }
+        
+        @keyframes pulseText {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        nav {
+            background: rgba(36, 0, 70, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav a {
+            color: white;
             text-decoration: none;
+            padding: 1rem 2rem;
+            display: block;
+            transition: all 0.3s;
+            position: relative;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        nav a:hover {
+            transform: scale(1.1);
+            color: var(--accent-color);
+            text-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--accent-color);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        
+        nav a:hover::after {
+            width: 60%;
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            padding: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        section h2 {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--vibrant-purple);
+            font-size: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--vibrant-purple), transparent);
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, var(--primary-color), #5a189a);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            min-width: 130px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(123, 44, 191, 0.5);
+            transition: all 0.3s;
+            animation: bounce 2s infinite;
+        }
+        
+        .countdown-box:hover {
+            transform: translateY(-10px) rotate(3deg);
+            box-shadow: 0 0 30px rgba(123, 44, 191, 0.7);
+        }
+        
+        .countdown-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+        
+        .photo-grid, .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .photo-item, .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+            height: 280px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            cursor: pointer;
+            background: white;
+            padding: 15px;
+            transform: rotate(-2deg);
+            transition: all 0.3s;
+        }
+        
+        .photo-item:hover, .gallery-item:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .photo-item img, .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        #birthday-wish {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wish-card {
+            background: linear-gradient(135deg, var(--vibrant-purple), #5a189a);
+            padding: 4rem;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(157, 78, 221, 0.5);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        .wish-card:hover {
+            transform: rotateY(10deg) scale(1.05);
+        }
+        
+        .wish-card::before {
+            content: '✨';
+            position: absolute;
+            font-size: 4rem;
+            top: 10px;
+            right: 10px;
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .wish-heading {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        
+        .wish-text {
+            font-size: 1.4rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+        
+        .wish-emphasis {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 3rem 0;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px var(--accent-color);
+        }
+        
+        .wish-icons {
+            font-size: 4rem;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .wish-icons i {
+            color: var(--accent-color);
+            filter: drop-shadow(0 0 8px rgba(255, 202, 58, 0.6));
+            animation: bounce 2s infinite;
+        }
+        
+        .wish-icons i:nth-child(1) { animation-delay: 0s; }
+        .wish-icons i:nth-child(2) { animation-delay: 0.2s; }
+        .wish-icons i:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .wish-signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .wish-signature::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 60%;
+            height: 3px;
+            background: var(--accent-color);
+            transform: translateX(-50%);
+        }
+        
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent);
+            border-radius: 50%;
+            animation: floatUp 8s linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-1200px) rotate(720deg); opacity: 0; }
+        }
+        
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .photo-counter {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--vibrant-purple), #5a189a);
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(157, 78, 221, 0.4);
+        }
+        
+        .gallery-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--dark-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .gallery-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(36, 0, 70, 0.4);
+        }
+        
+        .slideshow-btn {
+            background: var(--accent-color);
+            color: var(--dark-color);
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 3rem auto 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 202, 58, 0.4);
+        }
+        
+        .slideshow-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 202, 58, 0.6);
+        }
+        
+        /* Memory Timeline Styles */
+        #memory-timeline {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .timeline-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 2rem 0;
+            gap: 2rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) var(--light-color);
+        }
+        
+        .timeline-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .timeline-container::-webkit-scrollbar-track {
+            background: var(--light-color);
+        }
+        
+        .timeline-container::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .timeline-item {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            transform: rotate(-2deg);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .timeline-item:hover {
+            transform: rotate(0deg) scale(1.1);
+            box-shadow: 0 12px 30px rgba(157, 78, 221, 0.5);
+        }
+        
+        .timeline-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-item h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--vibrant-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-item p {
+            font-size: 1rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-item .year {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px rgba(255, 202, 58, 0.5);
+        }
+        
+        .timeline-item i {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            filter: drop-shadow(0 0 5px rgba(255, 202, 58, 0.5));
+        }
+        
+        .timeline-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .timeline-btn {
+            background: var(--dark-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .timeline-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(36, 0, 70, 0.4);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #240046, #3c096c);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+            margin-top: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23240046' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,144C672,139,768,149,864,170.7C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            animation: wave 10s infinite linear;
+        }
+        
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 1440px 0; }
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulseIcon 2s infinite;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-8px);
+            background: rgba(255, 202, 58, 0.3);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+        
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: linear-gradient(135deg, #240046, #3c096c);
+                width: 250px;
+                box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.4);
+                transform: translateX(100%);
+                transition: transform 0.5s ease;
+            }
+            
+            nav ul.active {
+                display: flex;
+                transform: translateX(0);
+            }
+            
+            nav a {
+                padding: 1.5rem;
+                text-align: center;
+            }
+            
+            .countdown-container {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            header {
+                padding: 4rem 0;
+                min-height: 350px;
+                background-attachment: scroll;
+            }
+            
+            .countdown-box {
+                min-width: 110px;
+            }
+            
+            .wish-card {
+                padding: 2.5rem;
+            }
+            
+            .wish-heading {
+                font-size: 2rem;
+            }
+            
+            .wish-text {
+                font-size: 1.2rem;
+            }
+            
+            .photo-grid, .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-container {
+                flex-direction: column;
+                align-items: center;
+                overflow-x: hidden;
+            }
+            
+            .timeline-item {
+                flex: 0 0 auto;
+                width: 90%;
+            }
+            
+            .timeline-controls {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p>Laxmi Ramesh Games ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and disclose information when you use our mobile game, <strong>Tile Tactics: Find the Way</strong> ("Game").</p>
-        
-        <h2>1. Information We Collect</h2>
-        <p><strong>a) Personal Information</strong><br>We do not collect personally identifiable information such as name, email, or phone number unless you voluntarily provide it (e.g., customer support inquiries).</p>
-        <p><strong>b) Non-Personal Information</strong><br>We may collect non-personal data for analytics and improvement, such as:
-            <ul>
-                <li>Device information (model, operating system)</li>
-                <li>Game usage data (levels completed, session length)</li>
-                <li>Crash reports and error logs</li>
+    <header>
+        <div class="confetti" id="confetti-container"></div>
+        <div class="header-content">
+            <h1>Happy Birthday Vijay!</h1>
+            <p>Celebrating Your Special Day - May 10, 2025!</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <i class="fas fa-bars hamburger" id="hamburger"></i>
+            <ul id="nav-menu">
+                <li><a href="#countdown">Today's Celebration</a></li>
+                <li><a href="#birthday-wish">Birthday Wish</a></li>
+                <li><a href="#birthday-photos">Vijay's Moments</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#memory-timeline">Memory Timeline</a></li>
             </ul>
-        </p>
-        <p><strong>c) Third-Party Services</strong><br>Our Game may use third-party services such as:
-            <ul>
-                <li>Google Play Services (for leaderboard, achievements, or in-app purchases)</li>
-                <li>Ad Networks (if applicable)</li>
-                <li>Analytics Tools (to improve gameplay experience)</li>
-            </ul>
-        </p>
-        
-        <h2>2. How We Use Your Information</h2>
-        <p>The collected information is used for:
-            <ul>
-                <li>Improving Game functionality and performance</li>
-                <li>Fixing bugs and errors</li>
-                <li>Providing customer support</li>
-                <li>Serving relevant advertisements (if applicable)</li>
-            </ul>
-        </p>
-        
-        <h2>3. Data Sharing and Security</h2>
-        <p>We do not sell or rent your personal data. We may share anonymous usage data with third-party service providers for analytics and ads. We take security measures to protect your data, but no method of transmission is 100% secure.</p>
-        
-        <h2>4. Children's Privacy</h2>
-        <p>Our Game is intended for general audiences. If we discover that we have collected personal data from children under 13 (or equivalent age in your country), we will take steps to delete it.</p>
-        
-        <h2>5. Your Rights</h2>
-        <p>You can:
-            <ul>
-                <li>Opt out of personalized ads via device settings</li>
-                <li>Request deletion of collected data (if applicable)</li>
-            </ul>
-        </p>
-        
-        <h2>6. Changes to This Policy</h2>
-        <p>We may update this policy from time to time. Changes will be posted within the Game or on our official website.</p>
-        
-        <h2>7. Contact Us</h2>
-        <p>For questions about this Privacy Policy, contact us at:</p>
-        <p>📧 <a href="mailto:laxmigames01@gmail.com">laxmigames01@gmail.com</a></p>
-    </div>
+        </div>
+    </nav>
+    
+    <section id="countdown" class="fade-in">
+        <div class="container">
+            <h2>Celebrating TODAY!</h2>
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="days">00</div>
+                    <div>Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div>Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div>Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div>Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="birthday-wish" class="fade-in">
+        <div class="balloons" id="balloons-container"></div>
+        <div class="container">
+            <h2>Special Birthday Wishes for Vijay</h2>
+            <div class="wish-card">
+                <h3 class="wish-heading">Dear Vijay,</h3>
+                <p class="wish-text">On this magical day, we celebrate the incredible person you are! Your warmth, courage, and radiant spirit light up every room. May your birthday be a dazzling explosion of joy, love, and unforgettable moments.</p>
+                <p class="wish-text">As you embark on another year of your extraordinary journey, may you be blessed with boundless success, unwavering health, cherished friendships, and endless happiness.</p>
+                <p class="wish-emphasis">Here’s to the most spectacular birthday celebration ever!</p>
+                <div class="wish-icons">
+                    <i class="fas fa-birthday-cake"></i>
+                    <i class="fas fa-glass-cheers"></i>
+                    <i class="fas fa-gift"></i>
+                </div>
+                <p class="wish-signature">With Love, Happy Birthday!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="birthday-photos" class="fade-in">
+        <div class="container">
+            <h2>Vijay's Special Moments</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.3rem;">Treasured memories of our birthday star!</p>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300?text=Vijay+Photo+1" alt="Vijay Photo 1">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300?text=Vijay+Photo+2" alt="Vijay Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300?text=Vijay+Photo+3" alt="Vijay Photo 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="fade-in">
+        <div class="container">
+            <h2>Celebration Gallery</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.3rem;">Reliving joyful times with Vijay</p>
+            <div class="gallery-controls">
+                <button id="prev-photos" class="gallery-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                <span id="photo-counter" class="photo-counter">1-8 of 32</span>
+                <button id="next-photos" class="gallery-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="gallery" id="photo-gallery"></div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <button id="slideshow-btn" class="slideshow-btn"><i class="fas fa-play"></i> Start Slideshow</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="memory-timeline" class="fade-in">
+        <div class="container">
+            <h2>Vijay's Memory Timeline</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.3rem;">A journey through Vijay's unforgettable moments</p>
+            <div class="timeline-container" id="timeline-container">
+                <div class="timeline-item">
+                    <img src="https://via.placeholder.com/400x300?text=Moment+1" alt="First Birthday">
+                    <h3>First Birthday</h3>
+                    <p>Vijay's first cake smash was a joyful mess!</p>
+                    <div class="year">2000</div>
+                    <i class="fas fa-baby"></i>
+                </div>
+                <div class="timeline-item">
+                    <img src="https://via.placeholder.com/400x300?text=Moment+2" alt="School Days">
+                    <h3>School Days</h3>
+                    <p>Winning the science fair with a volcano model!</p>
+                    <div class="year">2010</div>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-item">
+                    <img src="https://via.placeholder.com/400x300?text=Moment+3" alt="Memorable Trip">
+                    <h3>Memorable Trip</h3>
+                    <p>Exploring the mountains with friends!</p>
+                    <div class="year">2015</div>
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="timeline-item">
+                    <img src="https://via.placeholder.com/400x300?text=Moment+4" alt="Graduation">
+                    <h3>Graduation</h3>
+                    <p>Celebrating academic success with pride!</p>
+                    <div class="year">2020</div>
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="timeline-item">
+                    <img src="https://via.placeholder.com/400x300?text=Moment+5" alt="Last Birthday">
+                    <h3>Last Birthday</h3>
+                    <p>A spectacular party with loved ones!</p>
+                    <div class="year">2024</div>
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+            </div>
+            <div class="timeline-controls">
+                <button id="prev-timeline" class="timeline-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                <button id="next-timeline" class="timeline-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    
     <footer>
-        &copy; 2025 Laxmi Ramesh Games. All rights reserved.
+        <div class="footer-wave"></div>
+        <div class="container">
+            <h3>Share Vijay’s Birthday Joy</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>Contact us: <a href="mailto:vijay.birthday@example.com" style="color: var(--accent-color); text-decoration: none;">vijay.birthday@example.com</a></p>
+            <p>© 2025 Vijay's Birthday Celebration</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Enhanced Confetti Animation
+        function launchConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 80,
+                origin: { y: 0.5 },
+                colors: ['#7b2cbf', '#ffca3a', '#e0aaff', '#ffffff', '#9d4edd'],
+                shapes: ['circle', 'square', 'star'],
+            });
+        }
+        setInterval(launchConfetti, 2500);
+
+        // Floating Balloons
+        function createBalloons() {
+            const balloonsContainer = document.getElementById('balloons-container');
+            const colors = ['#ff6b6b', '#4ecdc4', '#ffca3a', '#7b2cbf', '#e0aaff', '#9d4edd'];
+            for (let i = 0; i < 12; i++) {
+                const balloon = document.createElement('div');
+                balloon.classList.add('balloon');
+                balloon.style.width = `${Math.random() * 60 + 60}px`;
+                balloon.style.height = `${Math.random() * 100 + 100}px`;
+                balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.left = `${Math.random() * 100}vw`;
+                balloon.style.animationDuration = `${Math.random() * 6 + 7}s`;
+                balloon.style.animationDelay = `${Math.random() * 5}s`;
+                balloonsContainer.appendChild(balloon);
+                balloon.addEventListener('animationend', () => balloon.remove());
+            }
+        }
+        setInterval(createBalloons, 1500);
+        createBalloons();
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const birthday = new Date('May 10, 2025 00:00:00');
+            const timeDiff = birthday - now;
+            if (timeDiff <= 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                document.querySelector('#countdown h2').textContent = "It's Vijay's Birthday!";
+                return;
+            }
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Photo Gallery
+        const photos = Array(32).fill().map((_, i) => `https://via.placeholder.com/400x300?text=Photo+${i+1}`);
+        let currentPage = 0;
+        const photosPerPage = 8;
+        let slideshowInterval = null;
+
+        function updateGallery() {
+            const gallery = document.getElementById('photo-gallery');
+            gallery.innerHTML = '';
+            const start = currentPage * photosPerPage;
+            const end = Math.min(start + photosPerPage, photos.length);
+            for (let i = start; i < end; i++) {
+                const item = document.createElement('div');
+                item.classList.add('gallery-item');
+                item.innerHTML = `<img src="${photos[i]}" alt="Celebration Photo ${i+1}">`;
+                gallery.appendChild(item);
+            }
+            document.getElementById('photo-counter').textContent = `${start+1}-${end} of ${photos.length}`;
+            document.getElementById('prev-photos').disabled = currentPage === 0;
+            document.getElementById('next-photos').disabled = end === photos.length;
+        }
+
+        document.getElementById('prev-photos').addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updateGallery();
+            }
+        });
+
+        document.getElementById('next-photos').addEventListener('click', () => {
+            if ((currentPage + 1) * photosPerPage < photos.length) {
+                currentPage++;
+                updateGallery();
+            }
+        });
+
+        document.getElementById('slideshow-btn').addEventListener('click', () => {
+            const btn = document.getElementById('slideshow-btn');
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+                slideshowInterval = null;
+                btn.innerHTML = '<i class="fas fa-play"></i> Start Slideshow';
+            } else {
+                slideshowInterval = setInterval(() => {
+                    if ((currentPage + 1) * photosPerPage < photos.length) {
+                        currentPage++;
+                    } else {
+                        currentPage = 0;
+                    }
+                    updateGallery();
+                }, 3000);
+                btn.innerHTML = '<i class="fas fa-pause"></i> Stop Slideshow';
+            }
+        });
+
+        updateGallery();
+
+        // Timeline Controls
+        const timelineContainer = document.getElementById('timeline-container');
+        document.getElementById('prev-timeline').addEventListener('click', () => {
+            timelineContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        document.getElementById('next-timeline').addEventListener('click', () => {
+            timelineContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        // Confetti on Timeline Hover
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                confetti({
+                    particleCount: 100,
+                    spread: 60,
+                    origin: { y: 0.6 },
+                    colors: ['#7b2cbf', '#ffca3a', '#9d4edd'],
+                });
+            });
+        });
+
+        // Scroll Animations
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeInElements.forEach(element => observer.observe(element));
+    </script>
 </body>
 </html>
